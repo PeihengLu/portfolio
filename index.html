@@ -3,48 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LU Peiheng(He/Him)</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Peiheng Lu - Personal Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav {
+            text-align: center;
+            margin: 1em 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        section {
+            padding: 20px;
+            background-color: white;
+            margin: 10px auto;
+            max-width: 800px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        .project {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <!-- Add more navigation items as needed -->
-            </ul>
-        </nav>
+        <h1>Peiheng Lu</h1>
+        <p>Current MSc Advanced Computer Science Student at University of Oxford</p>
     </header>
 
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
     <section id="about">
-        <div class="container">
-            <h1>About Me</h1>
-            <p>Write a brief introduction about yourself here.</p>
-        </div>
+        <h2>About Me</h2>
+        <p>
+            I graduated with first class honours from University of Edinburgh, also in Computer Science. 
+            I have worked as a research assistant in the UK Dementia Research Institute, as well as a 
+            computer vision engineer at various firms. I can spend whole days in cinema, love fast cars, 
+            and always enjoy learning new stuff.
+        </p>
     </section>
 
     <section id="projects">
-        <div class="container">
-            <h1>My Projects</h1>
-            <div class="project">
-                <h2>Project 1</h2>
-                <p>Description of Project 1.</p>
-            </div>
-            <div class="project">
-                <h2>Project 2</h2>
-                <p>Description of Project 2.</p>
-            </div>
-            <!-- Add more project sections as needed -->
+        <h2>Projects</h2>
+        <div class="project">
+            <h3><a href="https://github.com/PeihengLu/Project1">Project 1</a></h3>
+            <p>Brief description of Project 1.</p>
         </div>
+        <div class="project">
+            <h3><a href="https://github.com/PeihengLu/Project2">Project 2</a></h3>
+            <p>Brief description of Project 2.</p>
+        </div>
+        <div class="project">
+            <h3><a href="https://github.com/PeihengLu/Project3">Project 3</a></h3>
+            <p>Brief description of Project 3.</p>
+        </div>
+        <!-- Add more projects as needed -->
     </section>
 
-    <!-- Add more sections and content as needed -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <input type="submit" value="Send">
+        </form>
+    </section>
 
     <footer>
-        <div class="container">
-            <p>Contact information or copyright notice goes here.</p>
-        </div>
+        <p>&copy; 2024 Peiheng Lu</p>
     </footer>
 </body>
 </html>
