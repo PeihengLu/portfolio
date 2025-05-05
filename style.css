@@ -7,7 +7,9 @@ body, h1, h2, p {
 /* Apply a background color and basic styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -18,9 +20,15 @@ body {
 
 /* Style the header and navigation menu */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+nav {
+    text-align: center;
+    margin: 1em 0;
 }
 
 nav ul {
@@ -38,9 +46,19 @@ nav ul li a {
     font-weight: bold;
 }
 
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+}
+
 /* Style the sections */
 section {
-    padding: 40px 0;
+    padding: 20px;
+    background-color: white;
+    margin: 10px auto;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -61,8 +79,8 @@ h2 {
 
 /* Style the footer */
 footer {
-    background-color: #333;
-    color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
 }

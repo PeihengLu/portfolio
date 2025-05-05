@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Peiheng Lu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <input type="submit" value="Send">
+        </form>
+        <p id="confirmationMessage" style="display: none; color: green;">Thank you for your message!</p>
+        <p id="errorMessage" style="display: none; color: red;">Failed to send your message. Please try again later.</p>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="include.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init('kUZVk99FhExWowNj_'); // Replace with your EmailJS user ID
+        })();
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const serviceID = 'service_ctwuw1g'; // Replace with your EmailJS service ID
+            const templateID = 'template_ntxdlh4'; // Replace with your EmailJS template ID
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    document.getElementById('confirmationMessage').style.display = 'block'; // Show confirmation message
+                    document.getElementById('errorMessage').style.display = 'none'; // Hide error message
+                    this.reset(); // Reset the form fields
+                }, () => {
+                    document.getElementById('errorMessage').style.display = 'block'; // Show error message
+                    document.getElementById('confirmationMessage').style.display = 'none'; // Hide confirmation message
+                });
+        });
+    </script>
+</body>
+</html>
