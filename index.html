@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peiheng Lu - Personal Webpage</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script type="module" src="js/info-graphs.js"></script>
+    <script src="js/include.js"></script>
 </head>
 <body>
     <div id="header"></div>
@@ -22,10 +25,17 @@
                 and always enjoy learning new stuff.
             </p>
         </section>
+
+        <!-- New section for information graphs -->
+        <section id="info-graphs">
+            <h2>Information Center</h2>
+            <h3>Weather</h3>
+            <div id="weatherChart"></div> <!-- Updated to div for D3.js -->
+            <h3>COVID-19 Tracking</h3>
+            <div id="covidChart"></div> <!-- Updated to div for D3.js -->
+        </section>
     </section>
 
     <div id="footer"></div>
-
-    <script src="include.js"></script>
 </body>
 </html>
