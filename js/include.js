@@ -7,5 +7,5 @@ function loadComponent(id, file) {
         .catch(error => console.error('Error loading component:', error));
 }
 
-loadComponent('header', '../static/header.html');
-loadComponent('footer', '../static/footer.html');
+loadComponent('header', '/static/header.html');
+loadComponent('footer', '/static/footer.html');
